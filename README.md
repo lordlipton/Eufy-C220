@@ -1,2 +1,4 @@
-# Eufy-C220
-I have recently been doing reverse engineering work and vulnerability research on the Eufy C220 camera. I have quite a bit of information that could be useful for future researchers that I have discovered that I have put in this repository. If you have any information you would like to add feel free to submit a pull request!
+# About
+I have recently been researching the c220 camera from Eufy and have found multiple security vulnerabilities in the camera that have been properly disclosed. I will post more about these here once allowed by Eufy as one of them is extremely helpful when it comes to reverse engineering the firmware. I have decided to post things about the camera that are currently not under responsible disclosure through Eufy to help with future security researchers on the Eufy C220 or other similar Eufy cameras.
+# PCB
+The PCB on the C220 camera has a UART pin-out that is specifically compiled to not drop into a shell on boot. (Will post pictures of the PCB later). You are able to pull the firmware off of the SPI flash chip and the current version of the firmware as of 8/23/2026 is unencrypted and can be turned into a SquashFS filesystem using binwalk. The camera is using the Rockchip RV1103B.
